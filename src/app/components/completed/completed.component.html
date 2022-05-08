@@ -1,0 +1,11 @@
+
+<div class="conteiner text-center mt-5">
+  <h3 *ngIf="active">Non hai fatto niente..</h3>
+  <h3 *ngIf="active">FAI QUALCOSA!</h3>
+</div>
+<div>
+  <h1 *ngIf="inactive">COSE DA FARE OGGI:</h1>
+  <ul>
+      <li class="list-group-item list-group-item-success" *ngFor="let task of tasksCompletati; let i=index">{{task.title}} </li>
+  </ul>
+</div>

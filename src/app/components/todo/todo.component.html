@@ -1,0 +1,18 @@
+<div class="body">
+  <div class="input-group m-5s" id="input">
+      <input type="text" class="form-control" placeholder="Inserisci una cosa da fare" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="impegno">
+      <button class="btn btn-primary" type="button" id="button-addon2" (click)="aggiungiTask(impegno)">Aggiungi</button>
+  </div>
+  <h3 *ngIf="active" class="motivazionale">Che cosa facciamo oggi di bello????</h3>
+  <div>
+      <table class="table">
+          <tbody>
+              <tr class='fs-5' *ngFor="let task of tasks; let i=index">
+                  <td colspan="2">{{task.title}}</td>
+                  <td colspan="2" class="d-flex justify-content-end"><button class="btn btn-success" (click)="taskCompletato(i)">Completato</button></td>
+              </tr>
+          </tbody>
+
+      </table>
+  </div>
+</div>
